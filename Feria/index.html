@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestión de Ferias</title>
+
+    <meta name="theme-color" content="#111827">
+
+    <!-- Fuente -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div id="layout">
+
+    <!-- ===========================
+            SIDEBAR
+    ============================ -->
+
+    <aside id="sidebar">
+
+        <div class="logo">
+
+            <h1>GESTIÓN</h1>
+
+            <span>FERIAS</span>
+
+        </div>
+
+        <nav>
+
+            <a href="#" data-view="dashboard" class="menu activo">
+                🏠 Dashboard
+            </a>
+
+            <a href="#" data-view="emprendedores" class="menu">
+                👥 Emprendedores
+            </a>
+
+            <a href="#" data-view="ferias" class="menu">
+                📅 Ferias
+            </a>
+
+            <a href="#" data-view="puestos" class="menu">
+                🗺️ Puestos
+            </a>
+
+            <a href="#" data-view="agenda" class="menu">
+                📝 Agenda
+            </a>
+
+            <a href="#" data-view="contabilidad" class="menu">
+                💰 Contabilidad
+            </a>
+
+            <a href="#" data-view="estadisticas" class="menu">
+                📊 Estadísticas
+            </a>
+
+            <a href="#" data-view="configuracion" class="menu">
+                ⚙ Configuración
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="feria-activa">
+
+                <label>FERIA ACTIVA</label>
+
+                <select id="feriaSeleccionada">
+
+                    <option value="EUCA">🟢 EUCA</option>
+
+                    <option value="PLATE">🟣 PLATE</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- ===========================
+            CONTENIDO
+    ============================ -->
+
+    <div id="contenido">
+
+        <!-- HEADER -->
+
+        <header id="header">
+
+            <div>
+
+                <h2 id="tituloPagina">
+                    Dashboard
+                </h2>
+
+                <span id="subtituloPagina">
+                    Panel principal
+                </span>
+
+            </div>
+
+            <div id="acciones">
+
+                <button id="btnNuevo">
+                    ➕ Nuevo
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- DASHBOARD DE ESTADÍSTICAS -->
+
+        <section id="resumen">
+
+            <div class="stat-card">
+
+                <span>👥 Emprendedores</span>
+
+                <h2 id="statEmprendedores">0</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span>📅 Próxima Feria</span>
+
+                <h2 id="statProxima">--</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span>🏕️ Puestos</span>
+
+                <h2 id="statPuestos">0 / 0</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span>💰 Caja</span>
+
+                <h2 id="statCaja">$0</h2>
+
+            </div>
+
+        </section>
+
+        <!-- ===========================
+                CONTENIDO DINÁMICO
+        ============================ -->
+
+        <main id="app">
+
+            <!-- router.js cargará aquí las vistas -->
+
+        </main>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        MODAL GENERAL
+============================ -->
+
+<div id="modal">
+
+    <div id="modalContenido">
+
+    </div>
+
+</div>
+
+<!-- ===========================
+        NOTIFICACIONES
+============================ -->
+
+<div id="toast">
+
+</div>
+
+<!-- ===========================
+        JAVASCRIPT
+============================ -->
+
+<script src="js/app.js"></script>
+
+<script src="js/componentes.js"></script>
+
+<script src="js/router.js"></script>
+
+</body>
+
+</html>

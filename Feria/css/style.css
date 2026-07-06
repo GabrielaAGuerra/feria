@@ -1,0 +1,25 @@
+/* Gestión de Ferias - style.css */
+:root{--bg:#111827;--bg2:#1f2937;--panel:#1b2433;--border:#2e3b52;--text:#f3f4f6;--muted:#9ca3af;--green:#2ecc71;--purple:#9b59b6;--radius:14px;--shadow:0 10px 25px rgba(0,0,0,.25)}
+*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%}body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+#layout{display:flex;min-height:100vh}
+#sidebar{width:260px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:22px;position:fixed;top:0;left:0;bottom:0}
+.logo h1{font-size:28px}.logo span{color:var(--green);font-weight:700}
+nav{display:flex;flex-direction:column;gap:8px;margin-top:30px}
+.menu{text-decoration:none;color:var(--muted);padding:12px 14px;border-radius:10px;transition:.2s}
+.menu:hover{background:#253147;color:#fff}.menu.activo{background:var(--green);color:#111;font-weight:700}
+.sidebar-footer{margin-top:auto}label{display:block;font-size:12px;color:var(--muted);margin-bottom:8px}
+select,input,textarea{width:100%;padding:12px;background:var(--panel);border:1px solid var(--border);border-radius:10px;color:#fff}
+#contenido{margin-left:260px;flex:1;padding:28px}
+#header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+#subtituloPagina{color:var(--muted)}
+button{background:var(--green);border:none;padding:11px 18px;border-radius:10px;font-weight:700;cursor:pointer}
+#resumen{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:24px}
+.stat-card,.card,.panel,#app{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.stat-card span{color:var(--muted)}.stat-card h2{margin-top:10px;font-size:32px}
+#app{min-height:500px}
+table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid var(--border);text-align:left}
+#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);align-items:center;justify-content:center}
+#modalContenido{background:var(--panel);padding:24px;border-radius:16px;width:min(700px,92vw)}
+#toast{display:none;position:fixed;right:20px;bottom:20px;background:var(--green);color:#111;padding:12px 16px;border-radius:10px}
+@media(max-width:900px){#sidebar{width:82px}.logo span,.menu{font-size:0}.logo h1{font-size:18px}#contenido{margin-left:82px}}
+@media(max-width:700px){#header{flex-direction:column;align-items:flex-start;gap:15px}#resumen{grid-template-columns:1fr}}
