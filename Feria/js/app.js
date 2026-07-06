@@ -275,6 +275,7 @@ const app = {
         return true;
     },
 
+ codex/estructurar-sistema-como-erp-centralizado-bwzjfa
 
     borrarRegistro(coleccion, id) {
         this.db[coleccion] = (this.db[coleccion] || []).filter((item) => item.id !== id);
@@ -282,6 +283,8 @@ const app = {
         this.toast('Registro eliminado');
     },
 
+=======
+ main
     duplicarFeria(id) {
         const feria = this.db.ferias.find((item) => item.id === id);
         if (!feria) return;
