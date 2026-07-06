@@ -276,7 +276,7 @@ const app = {
     },
 
 
-    eliminarRegistro(coleccion, id) {
+    borrarRegistro(coleccion, id) {
         this.db[coleccion] = (this.db[coleccion] || []).filter((item) => item.id !== id);
         this.guardar();
         this.toast('Registro eliminado');
